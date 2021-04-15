@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     Button takePicture;
     ImageView photo;
+    TouchListener touchListener;
     static final int REQUEST_IMAGE= 1;
 
     @Override
@@ -22,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         takePicture = findViewById(R.id.takePicture);
         photo = findViewById(R.id.photo);
-
+        touchListener = new TouchListener(this);
+        photo.setOnTouchListener(touchListener);
     }
 
     public void takePicture(View view){
