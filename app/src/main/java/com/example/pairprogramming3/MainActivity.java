@@ -35,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
             // display error state to the user
         }
     }
-    public void rotatePhoto(float rotation){
-        photo.setRotation(rotation);
+    public void rotatePhoto(int rotation){
+        photo.animate().rotation(rotation).start();
+
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

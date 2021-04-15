@@ -47,12 +47,15 @@ public class TouchListener implements View.OnTouchListener {
 
 
         public void onSwipeRight() {
+            mainActivity.rotatePhoto(90);
         }
 
         public void onSwipeLeft() {
+            mainActivity.rotatePhoto(270);
         }
 
         public void onSwipeTop() {
+            mainActivity.rotatePhoto(0);
         }
 
         public void onSwipeBottom() {
